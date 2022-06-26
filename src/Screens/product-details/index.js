@@ -10,6 +10,6 @@ const ProductDetailsScreen = () => {
           
         </View>
     );
-}
+};
 
 export default ProductDetailsScreen;

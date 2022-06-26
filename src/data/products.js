@@ -1,0 +1,42 @@
+export const products = [
+    {
+        id: 1,
+        categoryId: 1,
+        name: 'Pan de yema',
+        description: 'clasico y delicioso pan de yema',
+        weight: '60gr',
+        price: 1.00,
+    },
+    {
+        id: 2,
+        categoryId: 1,
+        name: 'Pan frances',
+        description: 'clasico y tierno pan frances',
+        weight: '80gr',
+        price: 1.50,
+    },
+    {
+        id: 3,
+        categoryId: 2,
+        name: 'Pan integral',
+        description: 'clasico y saludable pan integral',
+        weight: '70gr',
+        price: 1.80,
+    },
+    {
+        id: 4,
+        categoryId: 2,
+        name: 'Pan Frances integral',
+        description: 'clasico y tierno pan frances integral',
+        weight: '90gr',
+        price: 2.00,
+    },
+    {
+        id: 5,
+        categoryId: 3,
+        name: 'Pan de trigo',
+        description: 'clasico y delicioso pan de trigo',
+        weight: '60gr',
+        price: 1.00,
+    },
+];

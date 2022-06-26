@@ -21,13 +21,13 @@ export default function App() {
   });
   if (!fontsLoaded) {
     return <ActivityIndicator />;
-  }
+  };
 
 
 
   return (
     <Root />
   );
-}
+};
 
 

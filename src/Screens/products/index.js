@@ -12,6 +12,6 @@ const ProductsScreen = ({navigation}) => {
             </Button>
         </View>
     );
-}
+};
 
 export default ProductsScreen;
