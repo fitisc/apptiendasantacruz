@@ -11,18 +11,24 @@ export const styles = StyleSheet.create({
     containerTouchable: {
         flex: 1,
         borderRadius: 10,
+        backgroundColor: colors.white,
         shadowColor: colors.shadow,
         shadowOpacity: 0.26,
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 8,
         elevation: 3,
-        justifyContent: "flex-end",
-        alignItems: "flex-end",
+        justifyContent: "center",
+        alignItems: "center",
         padding: 10,
     },
-    title: {
-        fontSize: 20,
+    name: {
+        fontSize: 14,
         fontWeight: "bold",
         fontFamily: "OpenSans-Bold",
+    },
+    detail: {
+        fontSize: 14,
+        fontFamily: "OpenSans-Regular",
+        color: colors.grey,
     },
 });

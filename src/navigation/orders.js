@@ -7,10 +7,10 @@ import {colors} from "../constants/themes/colors";
 const Stack = createNativeStackNavigator();
 const isIOS = Platform.OS === "ios";
 
-const MainNavigator = () => {
+const OrdersNavigator = () => {
     return (
         <Stack.Navigator
-            initialRouteName="Categories"
+            initialRouteName="Orders"
             screenOptions={{
             headerStyle: {
                 backgroundColor: isIOS ? colors.secondary : colors.primary,},
@@ -18,28 +18,17 @@ const MainNavigator = () => {
             headerTitleStyle: {fontFamily: "OpenSans-Bold", fontSize: 20},
             }}>
             <Stack.Screen 
-            name="Categories" 
+            name="Orders" 
             component={CategoriesScreen}
             options={{
                 title: "Categories",
 
                 
-            }} />
-            <Stack.Screen 
-            name="Products" 
-            component={ProductsScreen}
-            options= {({route}) => ({
-                title: route.params.title,
-            })} />
-            <Stack.Screen 
-            name="ProductDetails" 
-            component={ProductDetailsScreen}
-            options= {({route}) => ({
-                title: route.params.name,
-            })}
+            }}
+           
             />
         </Stack.Navigator>
     );
 };
 
-export default MainNavigator;
+export default OrdersNavigator;
