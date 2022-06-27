@@ -1,7 +1,7 @@
 import React from "react";
 import {Platform } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { CategoriesScreen, ProductsScreen, ProductDetailsScreen } from "../Screens/Index.js";
+import { OrdersScreen } from "../Screens/Index.js";
 import {colors} from "../constants/themes/colors";
 
 const Stack = createNativeStackNavigator();
@@ -19,9 +19,9 @@ const OrdersNavigator = () => {
             }}>
             <Stack.Screen 
             name="Orders" 
-            component={CategoriesScreen}
+            component={OrdersScreen}
             options={{
-                title: "Categories",
+                title: "Orders",
 
                 
             }}
