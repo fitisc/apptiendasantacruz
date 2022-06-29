@@ -19,6 +19,7 @@ export const styles = StyleSheet.create({
         justifyContent: "flex-end",
         alignItems: "flex-end",
         padding: 10,
+
     },
     title: {
         fontSize: 20,

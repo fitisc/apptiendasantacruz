@@ -7,8 +7,7 @@ const Root = () => {
   return (
    <SafeAreaProvider>
     <AppNavigator />
-   
-    </SafeAreaProvider>
+   </SafeAreaProvider>
    
   );
 };

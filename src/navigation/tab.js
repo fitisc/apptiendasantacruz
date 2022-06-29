@@ -1,4 +1,5 @@
 import React from "react";
+import { Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import MainNavigator from "./main";
@@ -8,6 +9,13 @@ import { colors } from "../constants/themes/colors";
 
 
 const BottomTabs = createBottomTabNavigator(); 
+
+const LabelBottomTab = (focused, label) => (
+    <Text style={{color: focused ? colors.primary : colors.text, 
+        fontFamily: focused ? "OpenSans-Bold" : "openSans-Regular", 
+    }}>{label}</Text>
+)
+
 
 
 const TabNavigator = () => {
@@ -24,11 +32,11 @@ const TabNavigator = () => {
                 name="ShopTab"
                 component={MainNavigator}
                 options={{
-                    tabBarLabel: "Shop",
+                    tabBarLabel: ({focused}) => LabelBottomTab(focused, "Shop"),
                     TabBarIcon: ({ focused }) => (
                         <Ionicons
                             name={focused ? "home" : "home-outline"} 
-                            size={20}
+                            size={18}
                             color={focused ? colors.primary : colors.black}
                         />
                     ),
@@ -38,11 +46,11 @@ const TabNavigator = () => {
                 name="CartTab"
                 component={CartNavigator}
                 options={{
-                    tabBarLabel: "Cart",
+                    tabBarLabel: ({focused}) => LabelBottomTab(focused, "Cart"),
                     TabBarIcon: ({ focused }) => (
                         <Ionicons
                             name={focused ? "cart" : "cart-outline"} 
-                            size={20}
+                            size={18}
                             color={focused ? colors.primary : colors.black}
                         />
                     ),
@@ -52,11 +60,11 @@ const TabNavigator = () => {
                 name="OrdersTab"
                 component={OrdersNavigator}
                 options={{
-                    tabBarLabel: "Orders",
+                    tabBarLabel: ({focused}) => LabelBottomTab(focused, "Orders"),
                     TabBarIcon: ({ focused }) => (
                         <Ionicons
                             name={focused ? "file-tray-full" : "file-tray-outline"} 
-                            size={20}
+                            size={18}
                             color={focused ? colors.primary : colors.black}
                         />
                     ),
