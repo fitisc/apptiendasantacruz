@@ -1,4 +1,5 @@
 import { products } from "../../data/products";
+import { productsTypes } from "../types/products.types";
 
 const { SELECT_PRODUCT, FILTERED_PRODUCTS } = productsTypes;
 

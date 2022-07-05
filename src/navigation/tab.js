@@ -12,7 +12,7 @@ const BottomTabs = createBottomTabNavigator();
 
 const LabelBottomTab = (focused, label) => (
     <Text style={{color: focused ? colors.primary : colors.text, 
-        fontFamily: focused ? "OpenSans-Bold" : "openSans-Regular", 
+        fontFamily: focused ? "OpenSans-Bold" : "OpenSans-Regular", 
     }}>{label}</Text>
 )
 
@@ -35,7 +35,7 @@ const TabNavigator = () => {
                     tabBarLabel: ({focused}) => LabelBottomTab(focused, "Shop"),
                     TabBarIcon: ({ focused }) => (
                         <Ionicons
-                            name={focused ? "home" : "home-outline"} 
+                            name= {route.name === "home" ?focused === "home" : "home-outline"}
                             size={18}
                             color={focused ? colors.primary : colors.black}
                         />

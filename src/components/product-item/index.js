@@ -19,7 +19,7 @@ const ProductItem = ({ item, onSelected}) => {
                         })}
                     </Text>
                     <Text style={styles.detail}>Peso:{item.weight}</Text>
-,                </View>
+               </View>
             </TouchableOpacity>
         </View>
     );
