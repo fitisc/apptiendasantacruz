@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons/Ionicons";
 import MainNavigator from "./main";
 import CartNavigator from "./cart";
 import OrdersNavigator from "./orders";
@@ -35,7 +35,7 @@ const TabNavigator = () => {
                     tabBarLabel: ({focused}) => LabelBottomTab(focused, "Shop"),
                     TabBarIcon: ({ focused }) => (
                         <Ionicons
-                            name= {route.name === "home" ?focused === "home" : "home-outline"}
+                            name= {focused ? "home" : "home-outline"}
                             size={18}
                             color={focused ? colors.primary : colors.black}
                         />

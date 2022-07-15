@@ -4,7 +4,8 @@ export const cart = [
         name: 'Pan de yema',
         description: 'clasico y delicioso pan de yema',
         weight: '60gr',
-        price: 1.00
+        price: 1.00,
+        quantity: 1,
     },
     {
         id: 2,
@@ -12,7 +13,8 @@ export const cart = [
         name: 'Pan frances',
         description: 'clasico y tierno pan frances',
         weight: '80gr',
-        price: 1.50
+        price: 1.50,
+        quantity: 1,
     },
         
-]
+];

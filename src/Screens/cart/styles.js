@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
     footer: {
         borderTopColor: "#ccc",
         borderTopWidth: 1,
+        paddingVertical: 10,
     },
     buttonConfirm: {
         backgroundColor: "#00a680",

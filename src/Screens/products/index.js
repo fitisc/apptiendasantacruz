@@ -2,11 +2,11 @@ import React, {useEffect} from 'react';
 import { View, FlatList } from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 import { ProductItem } from '../../components/index';
-import { filteredProducts } from '../../store/actions/products.actions';
+import { filteredProducts, selectProduct } from '../../store/actions/products.actions';
 import {styles} from './styles';
 
-const ProductsScreen = ({navigation, dispatch}) => {
-    dispatch = useDispatch();
+const ProductsScreen = ({ navigation }) => {
+     const dispatch = useDispatch();
 
     const filterProducts = useSelector((state) => state.product.filteredProducts);
     const category = useSelector((state) => state.category.selected);

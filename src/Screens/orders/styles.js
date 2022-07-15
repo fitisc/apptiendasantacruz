@@ -7,4 +7,8 @@ export const styles = StyleSheet.create({
         margin: 10,
         height: 180,
     },
+    orderList: {
+        flex: 1,
+
+    },
 });

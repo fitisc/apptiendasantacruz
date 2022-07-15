@@ -1,49 +1,50 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
-import { FlatList } from "react-native";
-import { cart} from "../../data/cart";
-import { CartItem } from "../../components/index";
+import { FlatList, TouchableOpacity, Text, View, SafeAreaView } from "react-native";
+import { CartItem } from "../../components";
+import { useSelector, useDispatch } from "react-redux";
+import { removeItem, confirmCart } from "../../store/actions/cart.action";
 import { styles } from "./styles";
 
 const CartScreen = () => {
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart.items);
+  const total = useSelector((state) => state.cart.total);
+  const onHandlerDeleteItem = (id) => {
+    dispatch(removeItem(id));
+  };
 
-    const total = 1200;
+  const onHandlerConfirmCart = () => {
+    dispatch(confirmCart(cart, total));
+  };
+  const renderItem = ({ item }) => (
+    <CartItem item={item} onDelete={onHandlerDeleteItem} />
+  );
 
-    const onHandlerDeleteItem = (id) => {
-        console.log(id);
-    };
-    
-
-    const renderItem = ({ item }) => {
-        return <CartItem item={item} onDelete={onHandlerDeleteItem} />;
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+    <View style={styles.container}>
+      <View style={styles.cartList}>
+        <FlatList
+          data={cart}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+        />
+      </View>
+      <View style={styles.footer}>
+        <TouchableOpacity
+          style={styles.buttonConfirm}
+          onPress={() => onHandlerConfirmCart()}
+        >
+          <Text style={styles.buttonText}>Confirm</Text>
+          <View style={styles.totalContainer}>
+            <Text style={styles.totalTitle}>Total</Text>
+            <Text style={styles.total}>${total}</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
+    </SafeAreaView>
+  );
 };
-    const onHandlerConfirmCart = () => {
-        console.log("Confirmar compra");
-};
-
-
-
-    return (
-        <View style={styles.container}>
-            <View style={styles.cartList}>
-                <FlatList
-                data= {cart}
-                renderItem= {renderItem}
-                keyExtractor= {(item) => item.id}
-                />
-            </View>
-            <View style={styles.footer}>
-                <TouchableOpacity style={styles.buttonConfirm} onPress={onHandlerConfirmCart()}>
-                    <Text style={styles.buttonText}>Confirmar compra</Text>
-                    <View style={styles.containerTotal}>
-                        <Text style={styles.totalTitle}>Total</Text>
-                        <Text style={styles.total}>${total}</Text>
-                    </View>
-                </TouchableOpacity>
-
-            </View>
-        </View>
-    )
-}
 
 export default CartScreen;

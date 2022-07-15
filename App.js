@@ -31,7 +31,7 @@ export default function App() {
 
   return (
     <Provider store={store}>
-    <Root />
+      <Root />
     </Provider>
   );
 };
