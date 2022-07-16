@@ -2,7 +2,7 @@ import React from "react";
 import { View, FlatList, SafeAreaView } from "react-native";
 import { CategoryItem } from "../../components/index";
 import { useSelector, useDispatch } from "react-redux";
-import { selectCategory } from "../../store/actions/category.action";
+import { selectCategory } from "../../store/actions/category.actions";
 import { styles } from "./styles";
 
 const CategoriesScreen = ({ navigation }) => {

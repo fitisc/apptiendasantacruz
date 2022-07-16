@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Ionicons } from "@expo/vector-icons/Ionicons";
+import { Ionicons } from "@expo/vector-icons";
 import MainNavigator from "./main";
 import CartNavigator from "./cart";
 import OrdersNavigator from "./orders";

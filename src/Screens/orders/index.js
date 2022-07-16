@@ -3,7 +3,7 @@ import { View, FlatList, SafeAreaView } from "react-native";
 import { styles } from "./styles";
 import { OrderItem } from "../../components/index";
 import { useDispatch, useSelector } from "react-redux";
-import { getOrders, deleteOrder } from "../../store/actions/order.action";
+import { getOrders, deleteOrder } from "../../store/actions/order.actions";
 
 const OrdersScreen = () => {
   const dispatch = useDispatch();

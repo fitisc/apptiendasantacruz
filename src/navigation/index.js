@@ -3,6 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { NavigationContainer} from "@react-navigation/native";
 import TabNavigator from "./tab";
 import AuthNavigator from "./auth";
+import { useSelector } from "react-redux";
 
 const AppNavigator = () => {
   const userId = useSelector((state) => state.auth.userId);

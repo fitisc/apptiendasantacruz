@@ -2,7 +2,7 @@ import React from "react";
 import { FlatList, TouchableOpacity, Text, View, SafeAreaView } from "react-native";
 import { CartItem } from "../../components";
 import { useSelector, useDispatch } from "react-redux";
-import { removeItem, confirmCart } from "../../store/actions/cart.action";
+import { removeItem, confirmCart } from "../../store/actions/cart.actions";
 import { styles } from "./styles";
 
 const CartScreen = () => {

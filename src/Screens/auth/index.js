@@ -3,8 +3,8 @@ import { View, Text, Button, KeyboardAvoidingView, TouchableOpacity } from "reac
 import { colors } from "../../constants/themes/colors";
 import { styles } from "./styles";
 import { Input } from "../../components/index";
-import {  useDispatch } from "react-redux";
-import { signup, signin } from "../../store/actions/auth.action";
+import { useDispatch } from "react-redux";
+import { signup, signin } from "../../store/actions/auth.actions";
 import { onInputChange, onFocusOut , UPDATED_FORM } from "../../utils/forms";
 
 const initialState = {
