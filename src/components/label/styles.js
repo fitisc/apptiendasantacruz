@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     },
     label: {
         fontSize: 14,
-        fontFamily: "Lato-Bold",
+        fontFamily: "OpenSans-Bold",
         color: colors.text,
     }
 })

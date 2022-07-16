@@ -10,14 +10,14 @@ export const styles = StyleSheet.create({
         borderBottomColor: colors.primary,
         borderBottomWidth: 1,
         width: '90%',
-        fontFamily: "Lato-Regular",
+        fontFamily: "OpenSans-Regular",
         marginBottom: 5,
     },
     message: {
         marginVertical: 0
     },
     helperText: {
-        fontFamily: "Lato-Bold",
+        fontFamily: "OpenSans-Bold",
         fontSize: 12,
         color: colors.error,
     },

@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   headerContainer: {},
   header: {
     fontSize: 16,
-    fontFamily: "Lato-Bold",
+    fontFamily: "OpenSans-Bold",
   },
   containerDetail: {
     flex: 1,
@@ -23,6 +23,6 @@ export const styles = StyleSheet.create({
   detail: {},
   detailTotal: {
     fontSize: 14,
-    fontFamily: "Lato-Regular",
+    fontFamily: "OpenSans-Regular",
   },
 });

@@ -19,12 +19,12 @@ export const styles = StyleSheet.create({
     },
     label: {
         fontSize: 14,
-        fontFamily: "Lato-Bold",
+        fontFamily: "OpenSans-Bold",
         marginVertical: 5,
     },
     title: {
         fontSize: 18,
-        fontFamily: 'Lato-Bold',
+        fontFamily: 'OpenSans-Bold',
         marginBottom: 15,
         textAlign: 'center',
     },
@@ -35,13 +35,13 @@ export const styles = StyleSheet.create({
     },
     propmtMessage: {
         fontSize: 14,
-        fontFamily: 'Lato-Regular',
+        fontFamily: 'OpenSans-Regular',
         color: colors.text,
         marginRight: 15
     },
     propmtButton: {
         fontSize: 14,
-        fontFamily: 'Lato-Bold',
+        fontFamily: 'OpenSans-Bold',
         color: colors.primary,
         textAlign: 'center',
     }

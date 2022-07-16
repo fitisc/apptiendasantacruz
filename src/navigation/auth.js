@@ -18,7 +18,7 @@ const AuthNavigator = () => {
         },
         headerTintColor: isIOS ? colors.black : colors.white,
         headerTitleStyle: {
-          fontFamily: "Lato-Bold",
+          fontFamily: "OpenSans-Bold",
         },
       }}
     >

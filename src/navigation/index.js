@@ -6,11 +6,12 @@ import AuthNavigator from "./auth";
 import { useSelector } from "react-redux";
 
 const AppNavigator = () => {
+  
   const userId = useSelector((state) => state.auth.userId);
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <NavigationContainer>
-        {userId ? 
+        {userId? 
           (<TabNavigator />) : 
           (<AuthNavigator />)
         }
